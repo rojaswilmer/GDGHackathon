@@ -13,9 +13,10 @@
 <body>
 <div id="commentApp">
     <div class="gdgCommentBoxe">
-                    <div class="fb-comments" data-href="https://agenciaprofile.com/kontenedor/wilmer/Loscher/beca001/" data-colorscheme="light" data-numposts="5" data-width="600"></div>
+                    <div class="fb-comments" data-href="https://agenciaprofile.com/kontenedor/wilmer/Loscher/beca001/" data-colorscheme="light" data-numposts="30" data-width="600"></div>
     </div>
-    <div class="gdgChat">
+    <div class="gdgChatSidebar">
+        <h1>GDGAPP NAME</h1>
         <ul>
             <li><span><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1076253_628443668_811014615_q.jpg"></span>Rojas Wilmer <a href="#"><img src="img/chat.png"></a></li>
             <li>Alexis Romero</li>
@@ -34,8 +35,17 @@
     </div>
 </div>
 <div id="fb-root"></div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="https://connect.facebook.net/es_LA/all.js"></script>
         <script>
+        (function($){
+            $(window).load(function(){
+                $(".gdgCommentBoxe").mCustomScrollbar();
+            });
+        })(jQuery);
+
+        
         window.fbAsyncInit = function() {
             FB.init({
                 appId : '529045123833032',
@@ -43,11 +53,7 @@
                 cookie : true, // enable cookies to allow the server to access the session
                 xfbml : true// parse XFBML
             });
-            FB.Canvas.setAutoGrow();
-
-            FB.api("/me", {fields: "picture"}, function(response){
-            console.log(response);
-            });
+            //FB.Canvas.setAutoGrow();
         }
         </script>
 </body>

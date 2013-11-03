@@ -1,14 +1,8 @@
 body {
-position: fixed;
 background: #999;
 -webkit-transition: all 0.3s;
 -moz-transition: all 0.3s;
 transition: all 0.3s;
-}
-
-#commentApp{
-	
-	background: #666;
 }
 
 #commentApp {
@@ -30,7 +24,7 @@ z-index: 0;
 	width: 640px;
 	padding: 10px;
 }
-.gdgChat{
+.gdgChatSidebar{
 	float: left;
 	width: 300px;
 	background:#3bbec0;
@@ -39,8 +33,19 @@ z-index: 0;
 	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
 
 }
-.gdgChat ul li{
+.gdgChatSidebar ul li{
 	list-style: none;
 }
 #localVideo{}
 #remoteVideo{}
+.gdgCommentBoxeVideo{
+	display: none;
+}
+.content{margin:40px; width:1040px; height:500px; overflow:auto;}
+		.content p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
+		.content p:nth-child(3n+0){color:#c96;}
+.mCSB_scrollTools .mCSB_draggerRail{width:6px; background:#000; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
+		.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px; background:#d03428; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
+		.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+		.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+		.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:#fcea6a;}
