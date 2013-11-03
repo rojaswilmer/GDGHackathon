@@ -21,15 +21,33 @@
             <video id="localVideo" autoplay></video>
             <video id="remoteVideo" autoplay></video>
 
-            <div>
-              <button id="hangupButton">Hang Up</button>
-            </div>
+            <a class="hangupButton" data-userId="1" href="#"><img src="img/hang_up.png"></a>
         </div>
+        <div id="gdgChatList">
         <ul>
             <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
             <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
             <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Last User</li>
         </ul>
+        </div>
 
     </div>
     
@@ -42,7 +60,10 @@
         $( document ).ready(function() {
 
             $(window).resize();
-
+            $(".hangupButton").on("click",function(){
+                stream.stop();
+                $(".gdgCommentBoxeVideo").fadeOut("Slow");
+            });
             $(".videoCall").on("click",function(){
 
                  navigator.getUserMedia = navigator.getUserMedia ||

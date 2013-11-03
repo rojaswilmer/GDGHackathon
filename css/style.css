@@ -35,9 +35,9 @@ z-index: 0;
 	font-size: 14px;
 	color:#274040;
 	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
-
+	overflow: hidden;
 }
-.gdgChatSidebar ul{
+#gdgChatList ul{
 	left: -10000px;
 list-style: none;
 margin: 0;
@@ -45,10 +45,10 @@ padding: 0;
 top: -10000px;
 z-index: 1;
 }
-.gdgChatSidebar ul li{
+#gdgChatList ul li{
 	position: relative;
 }
-.gdgChatSidebar ul li a{
+#gdgChatList ul li a{
 	padding: 5px 20px;
 color: inherit;
 line-height: 1.5em;
@@ -61,11 +61,11 @@ white-space: nowrap;
     width: 100%;
     float: left;
 }
-#localVideo{background: #7BC9CA;
+#localVideo{
 width: 150px;
 height: 150px;
 float: left;}
-#remoteVideo{background: #7BC9CA;
+#remoteVideo{
 width: 150px;
 height: 150px;
 float: right;
@@ -74,14 +74,20 @@ margin-top: 50px;
 .gdgCommentBoxeVideo{
 display: none;
 }
+#gdgChatList{
+overflow: auto;
+float: left;
+height: 330px;
+width: 300px;
+
+}
+#hangupButton{
+	cursor: pointer;
+    padding-left: 10px;
+}
 .gdgCommentBoxe{height:500px; overflow:auto;}
 		.gdgCommentBoxe p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
 		.gdgCommentBoxe p:nth-child(3n+0){color:#c96;}
-.mCSB_scrollTools .mCSB_draggerRail{width:6px; background:#000; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
-		.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px; background:#d03428; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
-		.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
-		.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
-		.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:#fcea6a;}
 .videoCall{
 	background: url("img/chat.png");
 }
