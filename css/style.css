@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100);
+
 body {
 background: #999;
 -webkit-transition: all 0.3s;
@@ -25,9 +27,11 @@ z-index: 0;
 	padding: 10px;
 }
 .gdgChatSidebar{
+	font-family: 'Raleway', sans-serif;
 	float: left;
 	width: 300px;
-	background:#3bbec0;
+	height: 520px;
+	background:#68FDFF;
 	font-size: 14px;
 	color:#fff;
 	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
@@ -36,16 +40,24 @@ z-index: 0;
 .gdgChatSidebar ul li{
 	list-style: none;
 }
+.logoSidebar{
+    text-align: center;
+    width: 100%;
+    float: left;
+}
 #localVideo{}
 #remoteVideo{}
 .gdgCommentBoxeVideo{
 	display: none;
 }
-.content{margin:40px; width:1040px; height:500px; overflow:auto;}
-		.content p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
-		.content p:nth-child(3n+0){color:#c96;}
+.gdgCommentBoxe{height:500px; overflow:auto;}
+		.gdgCommentBoxe p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
+		.gdgCommentBoxe p:nth-child(3n+0){color:#c96;}
 .mCSB_scrollTools .mCSB_draggerRail{width:6px; background:#000; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
 		.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px; background:#d03428; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
 		.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
 		.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 		.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:#fcea6a;}
+.videoCall{
+	background: url("img/chat.png");
+}

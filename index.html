@@ -13,12 +13,12 @@
 <body>
 <div id="commentApp">
     <div class="gdgCommentBoxe">
-                    <div class="fb-comments" data-href="https://agenciaprofile.com/kontenedor/wilmer/Loscher/beca001/" data-colorscheme="light" data-numposts="30" data-width="600"></div>
+                    <div class="fb-comments" data-href="http://wartdev.com/apps/GDGHackathon/" data-colorscheme="light" data-numposts="10" data-width="600"></div>
     </div>
     <div class="gdgChatSidebar">
-        <h1>GDGAPP NAME</h1>
+        <span class="logoSidebar"><img src="img/iconsmall.png"></span>
         <ul>
-            <li><span><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1076253_628443668_811014615_q.jpg"></span>Rojas Wilmer <a href="#"><img src="img/chat.png"></a></li>
+            <li><span><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1076253_628443668_811014615_q.jpg"></span>Rojas Wilmer <a class="videoCall" data-userId="1"><img src="img/chat.png"></a></li>
             <li>Alexis Romero</li>
             <li>Pawel Raszewski</li>
         </ul>
@@ -36,19 +36,31 @@
 </div>
 <div id="fb-root"></div>
 <script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="https://connect.facebook.net/es_LA/all.js"></script>
         <script>
-        (function($){
-            $(window).load(function(){
-                $(".gdgCommentBoxe").mCustomScrollbar();
-            });
-        })(jQuery);
 
-        
+        $( document ).ready(function() {
+ 
+        $(window).resize();
+
+
+        });
+
+
+            $(window).resize(function(){
+
+    $('#commentApp').css({
+        position:'absolute',
+        left: ($(window).width() - $('#commentApp').outerWidth())/2,
+        top: ($(window).height() - $('#commentApp').outerHeight())/2
+    });
+
+});
+
+
         window.fbAsyncInit = function() {
             FB.init({
-                appId : '529045123833032',
+                appId : '315955405209670',
                 status : true, // check login status
                 cookie : true, // enable cookies to allow the server to access the session
                 xfbml : true// parse XFBML
