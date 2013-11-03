@@ -27,7 +27,20 @@ z-index: 0;
 }
 .gdgCommentBoxe{
 	float: left;
+	width: 640px;
+	padding: 10px;
 }
 .gdgChat{
 	float: left;
+	width: 300px;
+	background:#3bbec0;
+	font-size: 14px;
+	color:#fff;
+	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+
 }
+.gdgChat ul li{
+	list-style: none;
+}
+#localVideo{}
+#remoteVideo{}

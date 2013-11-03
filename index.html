@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GDG Hackathon App</title>
 <!-- main JS libs -->
-<script src="js/libs/modernizr.min.js"></script>
 <!-- Style CSS -->
 <link href="css/style.css" media="screen" rel="stylesheet">
 </head>
@@ -14,10 +13,24 @@
 <body>
 <div id="commentApp">
     <div class="gdgCommentBoxe">
-                    <div class="fb-comments" data-href="https://agenciaprofile.com/kontenedor/wilmer/Loscher/beca001/" data-colorscheme="light" data-numposts="5" data-width="300"></div>
+                    <div class="fb-comments" data-href="https://agenciaprofile.com/kontenedor/wilmer/Loscher/beca001/" data-colorscheme="light" data-numposts="5" data-width="600"></div>
     </div>
     <div class="gdgChat">
-        Chat List
+        <ul>
+            <li><span><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1076253_628443668_811014615_q.jpg"></span>Rojas Wilmer <a href="#"><img src="img/chat.png"></a></li>
+            <li>Alexis Romero</li>
+            <li>Pawel Raszewski</li>
+        </ul>
+    </div>
+    <div class="gdgCommentBoxeVideo">
+            <video id="localVideo" autoplay></video>
+        <video id="remoteVideo" autoplay></video>
+
+        <div>
+          <button id="startButton">Start</button>
+          <button id="callButton">Call</button>
+          <button id="hangupButton">Hang Up</button>
+        </div>
     </div>
 </div>
 <div id="fb-root"></div>
@@ -31,6 +44,10 @@
                 xfbml : true// parse XFBML
             });
             FB.Canvas.setAutoGrow();
+
+            FB.api("/me", {fields: "picture"}, function(response){
+            console.log(response);
+            });
         }
         </script>
 </body>
