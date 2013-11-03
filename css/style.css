@@ -1,4 +1,19 @@
-.boxed {
+body {
+position: fixed;
+background: #999;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+#commentApp{
+	
+	background: #666;
+}
+
+#commentApp {
+float: left;
+width: 960px;
 background: #fff;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
@@ -9,4 +24,10 @@ box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
 margin-bottom: 30px;
 position: relative;
 z-index: 0;
+}
+.gdgCommentBoxe{
+	float: left;
+}
+.gdgChat{
+	float: left;
 }

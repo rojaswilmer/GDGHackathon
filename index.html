@@ -8,15 +8,30 @@
 <!-- main JS libs -->
 <script src="js/libs/modernizr.min.js"></script>
 <!-- Style CSS -->
-<link href="style.css" media="screen" rel="stylesheet">
+<link href="css/style.css" media="screen" rel="stylesheet">
 </head>
 
 <body>
-<div>
-    <div class="boxed">Comment</div>
-    <div class="chat">
+<div id="commentApp">
+    <div class="gdgCommentBoxe">
+                    <div class="fb-comments" data-href="https://agenciaprofile.com/kontenedor/wilmer/Loscher/beca001/" data-colorscheme="light" data-numposts="5" data-width="300"></div>
+    </div>
+    <div class="gdgChat">
         Chat List
     </div>
 </div>
+<div id="fb-root"></div>
+        <script src="https://connect.facebook.net/es_LA/all.js"></script>
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId : '529045123833032',
+                status : true, // check login status
+                cookie : true, // enable cookies to allow the server to access the session
+                xfbml : true// parse XFBML
+            });
+            FB.Canvas.setAutoGrow();
+        }
+        </script>
 </body>
 </html>
