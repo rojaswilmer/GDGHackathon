@@ -1,0 +1,12 @@
+.boxed {
+background: #fff;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+-moz-box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+margin-bottom: 30px;
+position: relative;
+z-index: 0;
+}
