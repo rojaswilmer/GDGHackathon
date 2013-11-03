@@ -17,22 +17,22 @@
     </div>
     <div class="gdgChatSidebar">
         <span class="logoSidebar"><img src="img/iconsmall.png"></span>
-        <ul>
-            <li><span><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1076253_628443668_811014615_q.jpg"></span>Rojas Wilmer <a class="videoCall" data-userId="1"><img src="img/chat.png"></a></li>
-            <li>Alexis Romero</li>
-            <li>Pawel Raszewski</li>
-        </ul>
-    </div>
-    <div class="gdgCommentBoxeVideo">
+                <div class="gdgCommentBoxeVideo">
             <video id="localVideo" autoplay></video>
-        <video id="remoteVideo" autoplay></video>
+            <video id="remoteVideo" autoplay></video>
 
-        <div>
-          <button id="startButton">Start</button>
-          <button id="callButton">Call</button>
-          <button id="hangupButton">Hang Up</button>
+            <div>
+              <button id="hangupButton">Hang Up</button>
+            </div>
         </div>
+        <ul>
+            <li><a class="videoCall" data-userId="1" href="#"><img src="img/chat.png"></a>Rojas Wilmer</li>
+            <li><a class="videoCall" data-userId="2" href="#"><img src="img/chat.png"></a>Alexis Romero</li>
+            <li><a class="videoCall" data-userId="3" href="#"><img src="img/chat.png"></a>Pawel Raszewski</li>
+        </ul>
+
     </div>
+    
 </div>
 <div id="fb-root"></div>
 <script src="js/jquery-1.10.2.min.js"></script>
@@ -40,11 +40,37 @@
         <script>
 
         $( document ).ready(function() {
- 
-        $(window).resize();
 
+            $(window).resize();
 
+            $(".videoCall").on("click",function(){
+
+                 navigator.getUserMedia = navigator.getUserMedia ||
+          navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+        var constraints = {video: true};
+
+        function successCallback(localMediaStream) {
+          window.stream = localMediaStream; // stream available to console
+          var video = document.querySelector("video");
+          video.src = window.URL.createObjectURL(localMediaStream);
+          video.play();
+        }
+
+        function errorCallback(error){
+          console.log("navigator.getUserMedia error: ", error);
+        }
+
+        navigator.getUserMedia(constraints, successCallback, errorCallback);
+
+$(".gdgCommentBoxeVideo").fadeIn("Slow");
         });
+
+            });
+ 
+        
+
+       
 
 
             $(window).resize(function(){

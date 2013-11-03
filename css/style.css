@@ -33,22 +33,46 @@ z-index: 0;
 	height: 520px;
 	background:#68FDFF;
 	font-size: 14px;
-	color:#fff;
+	color:#274040;
 	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
 
 }
+.gdgChatSidebar ul{
+	left: -10000px;
+list-style: none;
+margin: 0;
+padding: 0;
+top: -10000px;
+z-index: 1;
+}
 .gdgChatSidebar ul li{
-	list-style: none;
+	position: relative;
+}
+.gdgChatSidebar ul li a{
+	padding: 5px 20px;
+color: inherit;
+line-height: 1.5em;
+padding: 5px 5px;
+text-decoration: none;
+white-space: nowrap;
 }
 .logoSidebar{
     text-align: center;
     width: 100%;
     float: left;
 }
-#localVideo{}
-#remoteVideo{}
+#localVideo{background: #7BC9CA;
+width: 150px;
+height: 150px;
+float: left;}
+#remoteVideo{background: #7BC9CA;
+width: 150px;
+height: 150px;
+float: right;
+margin-top: 50px;
+}
 .gdgCommentBoxeVideo{
-	display: none;
+display: none;
 }
 .gdgCommentBoxe{height:500px; overflow:auto;}
 		.gdgCommentBoxe p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
